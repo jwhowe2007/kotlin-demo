@@ -1,0 +1,16 @@
+# All files not specified below here shall be automatically handled
+* text=auto
+
+# Declare all files that *must* always use lf endings
+*.sh text eol=lf
+*.zsh text eol=lf
+
+# Ensure Windows native files always have crlf endings
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Make sure GIT doesn't futz with line endings in binary files like images
+*.png binary
+*.jpeg binary
+*.jpg binary
+*.gif binary
