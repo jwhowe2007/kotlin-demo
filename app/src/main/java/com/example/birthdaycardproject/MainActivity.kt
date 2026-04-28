@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -49,23 +51,34 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GreetingText(message: String, modifier: Modifier = Modifier, from: String = "Nobody") {
-    Column (
-        verticalArrangement = Arrangement.Center,
-        modifier = modifier
-    ) {
-        Text(
-            text = message,
-            modifier = modifier.background(Color.Cyan),
-            fontSize = 80.sp,
-            lineHeight = 116.sp,
-            textAlign = TextAlign.Center
-        )
-        Text(
-            text = "From: $from",
-            modifier = Modifier.padding(16.dp).align(alignment = Alignment.End).background(Color.Cyan),
-            fontSize = 36.sp,
-            textAlign = TextAlign.Right
-        )
+    Column {
+        Box {
+            Column (
+                verticalArrangement = Arrangement.Center,
+                modifier = modifier
+            ) {
+                Text(
+                    text = message,
+                    modifier = modifier.background(Color.Cyan),
+                    fontSize = 80.sp,
+                    lineHeight = 116.sp,
+                    textAlign = TextAlign.Center
+                )
+                Text(
+                    text = "From: $from",
+                    modifier = Modifier.padding(16.dp).align(alignment = Alignment.End).background(Color.Cyan),
+                    fontSize = 36.sp,
+                    textAlign = TextAlign.Right
+                )
+            }
+        }
+        Box {
+            Column (verticalArrangement = Arrangement.Bottom, modifier = modifier) {
+                Row {
+                    Text( text = "Crafted by Integral Software Studios")
+                }
+            }
+        }
     }
 }
 
