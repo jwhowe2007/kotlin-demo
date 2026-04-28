@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -38,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     GreetingText(
                         message = "Happy Birthday, $personName!",
                         modifier = Modifier
-                            .padding(24.dp)
+                            .padding(8.dp)
                             .background(Color.Green),
                         from = "Android"
                     )
