@@ -56,6 +56,7 @@ fun GreetingText(message: String, modifier: Modifier = Modifier, from: String = 
             verticalArrangement = Arrangement.Center,
             modifier = modifier
         ) {
+            // Birthday message
             Text(
                 text = message,
                 modifier = modifier.background(Color.Cyan),
@@ -63,11 +64,12 @@ fun GreetingText(message: String, modifier: Modifier = Modifier, from: String = 
                 lineHeight = 116.sp,
                 textAlign = TextAlign.Center
             )
+            // Signature text
             Text(
                 text = stringResource(R.string.signature_text, from),
                 modifier = Modifier
                     .padding(16.dp)
-                    .align(alignment = Alignment.End)
+                    .align(alignment = Alignment.CenterHorizontally)
                     .background(Color.Cyan),
                 fontSize = 36.sp
             )
